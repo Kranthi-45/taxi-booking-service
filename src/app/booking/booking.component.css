@@ -1,0 +1,13 @@
+.no-gutters{
+    align-items: center;
+}
+.checked {
+    color: orange;
+  }
+  .inr,.fa-inr{
+    color: #f0e37d;
+
+  }
+  img{
+    border-radius: 50%;
+  }

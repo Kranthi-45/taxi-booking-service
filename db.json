@@ -1,0 +1,60 @@
+{
+  "user": [
+    {},
+    {
+      "id": 1129376,
+      "name": "Chaitra Rider",
+      "age": "",
+      "username": "",
+      "password": "",
+      "address": "Bangalore, Karnataka",
+      "referralCode": "",
+      "isCabRider": ""
+    },
+    {
+      "id": 6496505,
+      "name": "Chaitra Pro Rider",
+      "age": 23,
+      "username": "FuriosChaitra",
+      "password": "Fast bhat",
+      "address": "Bangalore, Karnataka",
+      "referralCode": "cb009",
+      "isCabRider": "Yes"
+    }
+  ],
+  "nearbyDrivers": [
+    {
+      "driverName": "Jeremy",
+      "vehicleNumber": "DL-CS7278",
+      "driverRating": "4",
+      "vehicleModel": "Polo",
+      "arrivalTime": "9:32 am",
+      "duration": "43 mins",
+      "fare": "345",
+      "from": "Delhi",
+      "to": "Gurugram"
+    },
+    {
+      "driverName": "Martha",
+      "vehicleNumber": "DL-CL6828",
+      "driverRating": "5",
+      "vehicleModel": "Swift",
+      "arrivalTime": "9:35 am",
+      "duration": "44 mins",
+      "fare": "350",
+      "from": "Gurugram",
+      "to": "Noida"
+    }
+  ],
+  "booking": {
+    "driverName": "Martha",
+    "vehicleNumber": "DL-CL6828",
+    "driverRating": "5",
+    "vehicleModel": "Swift",
+    "arrivalTime": "9:35 am",
+    "duration": "44 mins",
+    "fare": "350",
+    "from": "Gurugram",
+    "to": "Noida"
+  }
+}

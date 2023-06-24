@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+        </div>
+        <div class="col-4">
+            <h5>Happy Journey</h5>
+            <div class="from-to-details">
+                <div><span>From: </span> Delhi</div>
+                <div><span>To: </span> HYD</div>
+            </div>
+            <div class="bookingDetails-container">
+                <h4>Driver Details</h4>
+                <div class="booking-details"> 
+                    <div>Name: {{driverDetails.driverName}}</div>
+                    <div>Vehicle Number: {{driverDetails.vehicleNumber}}</div>
+                    <div>Vehicle Model: {{driverDetails.vehicleModel}}</div>
+                    <div>Driver Rating: {{driverDetails.driverRating}}</div>
+                    <div>Fare: {{driverDetails.fare}}</div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" (click)="goToHomePage()">Go To Home-></button>
+        </div>
+        <div class="col-4">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+#bimg {
+    width: 120%;
+    min-height: 80vh;
+    float: right;
+    background-image: url(../../assets/home-image.jpg);
+    background-size: contain;
+    background-position: inherit;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.home-heading-container{
+    margin: auto;
+    padding: 150px;
+}
+.btn-booking{
+    background-color: #fdf5b4;
+    border: 2px solid #fdf5b4;
+}

@@ -1,0 +1,93 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div class="" style="padding-top: 50px;">
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <form class="row g-3">
+          <div class="col">
+            <label for="from" class="form-label">From:</label>
+            <select id="from" name="from" class="form-control" [(ngModel)]="fromValue"
+              (ngModelChange)="onDropdownChange()">
+              <option value="" [selected]="true">Select...</option>
+              <option value="Gurugram">Gurugram</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Noida">Noida</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+          <div class="col">
+            <label for="to" class="form-label">To:</label>
+            <select id="to" name="to" class="form-control" [(ngModel)]="toValue" (ngModelChange)="onDropdownChange()">
+              <option value="" [selected]="true">Select...</option>
+              <option value="Gurugram">Gurugram</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Noida">Noida</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+        </form>
+      </div>
+    </div><br>
+    <div class="card">
+    <div class="row">
+      <div class="card mb-3 col-12" *ngFor="let book of sampleData;">
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <img src="../../assets/imag-cardriver.jpg" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{book.driverName}}</h5>
+              <p class="card-text">Vehicle Model: {{book.vehicleModel}}</p>
+              <p class="card-text">Arrival at: {{book.arrivalTime}} Duration: {{book.duration}}</p>
+              <p class="card-text">ratings: {{ book.driverRating }} <span *ngFor="let star of [1, 2, 3, 4, 5]" class="fa fa-star" [class.checked]="star <= book.driverRating"></span></p>
+              <p class="card-text">fair :<i class="fa fa-inr" aria-hidden="true"></i><span class="inr">{{book.fare}} </span></p>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <p class="card-text">
+              <button class="btn btn-primary" (click)="viewDetails(book)" data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog"  style="margin-top: 150px;">
+      <div class="modal-content" >
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Driver Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="card mb-3 col-12">
+            <div class="row">
+              <div class="col-md-4" style="margin: auto;">
+                <img src="../../assets/imag-cardriver.jpg" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{driverDetails?.driverName}}</h5>
+                  <p class="card-text">Vehicle Model: {{driverDetails?.vehicleModel}}</p>
+                  <p class="card-text">Arrival at: {{driverDetails?.arrivalTime}} Duration: {{driverDetails?.duration}}</p>
+                  <p class="card-text">ratings : {{driverDetails?.driverRating}} </p>
+                  <p class="card-text ">fair : <span class="inr">{{driverDetails?.fare}}</span></p>
+                  <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+          <button type="button" class="btn btn-outline-dark" (click)="onBtnClick(driverDetails)">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
